@@ -8,6 +8,9 @@ app.use(cors({
     credentials: true
 }))
 app.use(express.json())
+app.get("/", (req, res) =>{
+    res.send("Hello World")
+})
 
 //routes import
 import calendar1Route from "./routes/calendar1.routes.js"

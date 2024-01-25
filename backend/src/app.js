@@ -8,8 +8,10 @@ app.use(cors({
     credentials: true
 }))
 app.use(express.json())
-app.get("/", (req, res) =>{
-    res.send("Hello World")
+app.get("*", (req, res, next) =>{
+    res.status(200).json({
+        message:'bad request'
+    })
 })
 
 //routes import
